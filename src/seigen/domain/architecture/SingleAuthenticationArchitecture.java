@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Distributed system with multiple application servers and a single authentication server.
  */
-public class SingleAuthenticationArchitecture {
+public class SingleAuthenticationArchitecture implements Architecture {
 
     private final AuthenticationServer authentication;
 
@@ -27,7 +27,8 @@ public class SingleAuthenticationArchitecture {
         return authentication;
     }
 
-    public List<ApplicationServer> getServerList() {
+    @Override
+    public List<ApplicationServer> getApplicationServerList() {
         return serverList;
     }
 }
